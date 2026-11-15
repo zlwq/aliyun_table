@@ -1,0 +1,16 @@
+
+
+
+001.pdf :test_document_extract.py
+002.pdf:  推荐test_doc_parser_large_model.py 但还是会有小飞虫被误认为正儿八经的字符串内容 
+如果是test_document_extract.py 这个东西 只能抓住上下和左右的关系 其他的抓不住 
+test_digital_doc_structure.py documents/002.pdf 
+[提示] 电子文档解析只适用于有文本层的电子 PDF，不支持扫描版 PDF。
+
+006.pdf test_digital_doc_structure错位严重 但是test_doc_parser_large_model.py完全正确
+010.png  test_doc_parser_large_model.py有输出 但只是ocr内容 无法还原表格原本结构 
+087.png  table_understanding_image.py基本准确 但表头英语水果信息显示不出来  推荐使用llm解决
+087.doc_parser_large.simplified.json同样如此
+064.pdf 给大模型能准确识别大部分 但用其余的模型没有一个能还原的 多半是表格旋转的原因 
+转化为render的png 给大模型试一下 max基本没错 flash有错但能接受
+089.png test_doc_parser_large_model没用 
